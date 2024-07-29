@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="p-10">
-    <div className="flex gap-10 justify-evenly">
+    <div className="flex gap-10 justify-evenly flex-wrap">
       <Hour/>
       <Minute/>
     </div>

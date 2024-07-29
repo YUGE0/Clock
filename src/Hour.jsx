@@ -1,13 +1,43 @@
-import React from 'react'
+import {useEffect,useState,React} from 'react'
 
 export default function Hour() {
+  const [currentHour, setHour] = useState('');
+  const [currentSec, setSec] = useState('');
+  const [currentAmPM,setAmPm] = useState('');
+
+  useEffect(() => {
+    const updateDateTime = () => {
+      const now = new Date();
+      const hour = now.getHours();
+      const sec = now.getSeconds();
+      setHour(formatTime(hour));
+      setSec(formatTime(sec));
+      setAmPm(ampm(hour))
+    };
+    // Call the function immediately to set the initial time
+    updateDateTime();
+    // Update the time every second
+    const intervalId = setInterval(updateDateTime, 1000);
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []);
+
+  function formatTime(time) {
+    return time < 10 ? `0${time}` : time.toString();
+  }
+
+  function ampm(time){
+    return time >12 ? "PM" : "AM"
+  }
+
   return (
-    <div className="shadow-black shadow-sm p-2 rounded-lg">
+    <div className="shadow-black shadow-md px-5 rounded-lg">
         <div className="flex justify-around">
-          <h1 className="text-8xl">88</h1>
+          <h1 className="xl:text-Big md:text-Mid font-Sa font-light">{currentHour}</h1>
         </div>
-        <div className="flex justify-end">
-          <h1 className="p-1 px-2 shadow-inner rounded-md shadow-gray-600">AM</h1>
+        <div className="px-10 flex justify-between">
+          <h1 className="pb-2 text-5xl font-bold font-inter">{currentAmPM}</h1>
+          <h1 className="pb-2 text-5xl font-bold font-inter">{currentSec}</h1>
         </div>
     </div>
   )
