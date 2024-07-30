@@ -8,7 +8,7 @@ import Nav from './Nav'
 function App() {
 
   return (
-    <div className="px-20 pb-32 sm:pb-52 md:pb-46 xl:pb-20 dark:bg-black h-full">
+    <div className="px-20 pb-32 sm:py-52 md:py-46 xl:py-20 dark:bg-black h-full">
       <div>
         <Nav />
       </div>
