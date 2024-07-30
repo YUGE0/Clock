@@ -9,9 +9,8 @@ export default function Hour() {
     const updateDateTime = () => {
       const now = new Date();
       const hour = now.getHours();
-      const sec = now.getSeconds();
       setHour(formatTime(hour));
-      setSec(formatTime(sec));
+      setSec(formatTime(now.getSeconds()));
       setAmPm(ampm(hour))
     };
     // Call the function immediately to set the initial time
@@ -31,13 +30,13 @@ export default function Hour() {
   }
 
   return (
-    <div className="shadow-black shadow-md px-5 rounded-lg">
+    <div className="shadow-black dark:shadow-white/50 shadow-md px-5 rounded-lg w-100">
         <div className="flex justify-around">
-          <h1 className="xl:text-Big md:text-Mid font-Sa font-light">{currentHour}</h1>
+          <h1 className="xl:text-Big md:text-Mid font-Sa font-light dark:text-white">{currentHour}</h1>
         </div>
         <div className="px-10 flex justify-between">
-          <h1 className="pb-2 text-5xl font-bold font-inter">{currentAmPM}</h1>
-          <h1 className="pb-2 text-5xl font-bold font-inter">{currentSec}</h1>
+          <h1 className="pb-2 text-5xl font-bold font-inter dark:text-white">{currentAmPM}</h1>
+          <h1 className="pb-2 text-5xl font-bold font-inter dark:text-white">:{currentSec}</h1>
         </div>
     </div>
   )

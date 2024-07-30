@@ -11,6 +11,9 @@ export default {
         Mid:"25rem",
         Lit:"",
       },
+      width:{
+        '100':'40rem',
+      },
       fontFamily:{
         inter : '"Inter"',
         open : '"Open Sans"',
@@ -18,7 +21,9 @@ export default {
         Orb:'"Orbitron"',
         Sa:'"Saira"',
       },
+      colors:{},
     },
   },
   plugins: [],
+  darkMode:'class',
 }

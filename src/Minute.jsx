@@ -8,7 +8,7 @@ export default function Minute() {
   useEffect(() => {
     const updateDateTime = () => {
       const now = new Date();
-      setMinute(now.getMinutes());
+      setMinute(formatTime(now.getMinutes()));
       setDay(getDayName(now.getDay()));
       setDate(now.getDate());
       //setMinute(formatTime(minute));
@@ -36,13 +36,13 @@ export default function Minute() {
   }
 
   return (
-    <div className="shadow-black shadow-md p-2 rounded-lg">
+    <div className="shadow-black dark:shadow-white/50 shadow-md p-2 rounded-lg w-100">
         <div className="flex justify-around">
-          <h1 className="xl:text-Big md:text-Mid font-Sa font-light">{currentMinute}</h1>
+          <h1 className="xl:text-Big md:text-Mid font-Sa font-light dark:text-white">{currentMinute}</h1>
         </div>
         <div className="px-10 flex justify-between">
-          <h1 className="pb-2 text-5xl font-bold font-inter">{currentDay}</h1>
-          <h1 className="pb-2 text-5xl font-bold font-inter">{currentDate}</h1>
+          <h1 className="pb-2 text-5xl font-bold font-inter dark:text-white">{currentDay}</h1>
+          <h1 className="pb-2 text-5xl font-bold font-inter dark:text-white">{currentDate}</h1>
         </div>
     </div>
   )
