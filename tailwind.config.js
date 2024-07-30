@@ -7,12 +7,22 @@ export default {
   theme: {
     extend: {
       fontSize:{
-        Big:"30rem",
-        Mid:"25rem",
-        Lit:"",
+        Big:"23rem",
+        Mid:"20rem",
+        Lit:"16rem",
+        Ef:"10rem",
       },
       width:{
-        '100':'40rem',
+        '102':'30rem',
+        '101':'25rem',
+        '100':'22rem',
+        '99':'20rem',
+      },
+      height:{
+        '102':'42rem',
+        '101':'35rem',
+        '100':'28rem',
+        '99':'20rem',
       },
       fontFamily:{
         inter : '"Inter"',

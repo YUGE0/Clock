@@ -2,7 +2,7 @@ import {useEffect,useState,React} from 'react'
 
 export default function Nav() {
 
-    const[theme,setTheme] = useState("dark")
+    const[theme,setTheme] = useState("Dark")
     console.log(theme);
     const element = document.documentElement
 
@@ -20,9 +20,10 @@ export default function Nav() {
     },[theme])
 
   return (
-    <div className="flex gap-2 justify-center">
-      <button className="p-2 shadow-inner shadow-black/30 rounded-lg hover:bg-black/70 hover:text-white dark:text-white" onClick={()=>{setTheme("Dark")}}>Dark</button>
-      <button className="p-2 shadow-inner shadow-black/30 rounded-lg hover:bg-blue-300/50 dark:text-white" onClick={()=>{setTheme("Light")}}>Light</button>
+    <div className="flex gap-2 justify-center"> 
+    {theme==="Dark" && <button className="p-2 shadow-inner shadow-black/30 rounded-lg hover:bg-blue-300/50 dark:text-white" onClick={()=>{setTheme("Light")}}>Light</button>}
+    {theme==="Light" && <button className="p-2 shadow-inner shadow-black/30 rounded-lg hover:bg-black/70 hover:text-white dark:text-white" onClick={()=>{setTheme("Dark")}}>Dark</button>}
+      
     </div>
   )
 }

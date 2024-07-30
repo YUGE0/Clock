@@ -36,13 +36,13 @@ export default function Minute() {
   }
 
   return (
-    <div className="shadow-black dark:shadow-white/50 shadow-md p-2 rounded-lg w-100">
-        <div className="flex justify-around">
-          <h1 className="xl:text-Big md:text-Mid font-Sa font-light dark:text-white">{currentMinute}</h1>
+    <div className="shadow-black dark:shadow-white/50 shadow-md p-2 rounded-lg xl:w-102 xl:h-102 lg:w-101 lg:h-101 md:w-100 md:h-100 w-99 h-99">
+        <div className="flex justify-center">
+          <h1 className="xl:text-Big lg:text-Mid md:text-Lit text-Ef font-Sa font-light dark:text-white">{currentMinute}</h1>
         </div>
         <div className="px-10 flex justify-between">
-          <h1 className="pb-2 text-5xl font-bold font-inter dark:text-white">{currentDay}</h1>
-          <h1 className="pb-2 text-5xl font-bold font-inter dark:text-white">{currentDate}</h1>
+          <h1 className="pb-2 md:text-5xl text-3xl font-bold font-inter dark:text-white">{currentDay}</h1>
+          <h1 className="pb-2 md:text-5xl text-3xl font-bold font-inter dark:text-white">{currentDate}</h1>
         </div>
     </div>
   )
