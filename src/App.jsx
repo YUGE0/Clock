@@ -8,18 +8,18 @@ import Nav from './Nav'
 function App() {
 
   return (
-    <div className="px-20 py-20 dark:bg-black h-screen">
+    <div className="px-20 py-32 sm:py-52 md:py-46 xl:py-20 dark:bg-black h-full">
       <div>
         <Nav />
       </div>
-      <div className="flex justify-evenly flex-wrap items-center">
+      <div className="flex justify-evenly flex-wrap">
         <Hour/>
         <Minute/>
       </div>
-      <div className="p-10 flex justify-around">
-        <Time/>
-        <Time/>
-        <Time/>
+      <div className="p-10 flex flex-wrap justify-center">
+        <Time city="New York"/>
+        <Time city="Frankfurt"/>
+        <Time city="Helsinki"/>
       </div>
     </div>
 )
