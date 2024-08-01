@@ -10,7 +10,7 @@ function App() {
 
   return (
     <FullScreenProvider>
-    <div className="px-20 xl:py-12 md:py-22 sm:py-40 pb-40 dark:bg-black h-full">
+    <div className="px-20 xl:py-20 md:py-22 sm:py-48 pb-40 dark:bg-black h-full">
       <div>
         <Nav />
       </div>
