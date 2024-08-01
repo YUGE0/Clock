@@ -3,12 +3,14 @@ import Time from './Time'
 import Hour from './Hour'
 import Minute from './Minute'
 import Nav from './Nav'
+import FullScreenProvider from './FullScreenContext'
 
 
 function App() {
 
   return (
-    <div className="px-20 py-32 sm:pb-52 md:pb-46 xl:pb-20 dark:bg-black h-full">
+    <FullScreenProvider>
+    <div className="px-20 pb-32 sm:pb-52 md:pb-46 xl:py-20 dark:bg-black h-full">
       <div>
         <Nav />
       </div>
@@ -22,6 +24,7 @@ function App() {
         <Time city="Helsinki"/>
       </div>
     </div>
+    </FullScreenProvider>
 )
 }
 
