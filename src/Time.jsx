@@ -10,13 +10,13 @@ export default function Time({city}) {
 
   const cityData = {
     'New York': {
-      timezoneOffset: -9 * 60 - 30 // total hours-1 * 60 -30 Example offset in minutes
+      timezoneOffset: -4 * 60 // total hours-1 * 60 -30 Example offset in minutes
     },
     'Frankfurt': {
-      timezoneOffset: -3 * 60 - 30 
+      timezoneOffset: 2 * 60 
     },
     'Helsinki': {
-      timezoneOffset: -2 * 60 - 30 
+      timezoneOffset: 3 * 60 
     },
   };
 
@@ -25,9 +25,9 @@ export default function Time({city}) {
       const now = new Date();
       const cityOffset = cityData[city]?.timezoneOffset || 0;
       const adjustedTime = new Date(now.getTime() + cityOffset * 60000);
-      const hour = adjustedTime.getHours();
+      const hour = adjustedTime.getUTCHours()
       setHour(formatTime(hour));
-      setMinute(formatTime(adjustedTime.getMinutes()));
+      setMinute(formatTime(adjustedTime.getUTCMinutes()));
       setAmPm(ampm(hour))
     };
     // Call the function immediately to set the initial time
