@@ -18,7 +18,7 @@ function App() {
         // Simulate an API call
         setTimeout(() => {
           setIsLoading(false);
-        }, 10000);
+        }, 1000);
       }, []);
     
       if (isLoading) {
