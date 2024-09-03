@@ -30,7 +30,7 @@ export default function Hour() {
   }
 
   return (
-    <div className="shadow-black dark:shadow-white/50 shadow-md px-5 rounded-lg xl:w-102 xl:h-102 lg:w-101 lg:h-101 md:w-100 md:h-100 w-99 h-99">
+    <div className="shadow-black dark:shadow-white/50 shadow-md dark:shadow-sm px-5 rounded-xl xl:w-102 xl:h-102 lg:w-101 lg:h-101 md:w-100 md:h-100 w-99 h-99">
         <div className="flex justify-center">
           <h1 className="xl:text-Big lg:text-Mid md:text-Lit text-Ef font-Sa font-light dark:text-white">{currentHour}</h1>
         </div>

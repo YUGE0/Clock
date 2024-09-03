@@ -47,7 +47,7 @@ export default function Time({city}) {
   }
   return (
     <div className="p-8">
-      <h1 className="font-inter font-bold text-3xl dark:text-white">{city}</h1>
+      <h1 className="font-inter font-bold text-3xl dark:text-white ">{city}</h1>
       <div className="p-2 rounded-md shadow-sm shadow-black dark:shadow-white flex gap-1 w-fit items-baseline">
         <h1 className="font-inter font-bold text-3xl dark:text-white">{currentHour}</h1>
         <h1 className="font-inter font-bold text-3xl dark:text-white">:</h1>

@@ -18,11 +18,11 @@ function App() {
         // Simulate an API call
         setTimeout(() => {
           setIsLoading(false);
-        }, 1000);
+        }, 10000);
       }, []);
     
       if (isLoading) {
-        return <h1 className="p-40 pl-[22rem] text-[30rem] text-black font-inter font-bold">TIME</h1>
+        return <div className="flex justify-around"><h1 className="text-[10rem] sm:text-[18rem] md:text-[20rem] lg:text-[25rem] xl:text-[38rem] text-black font-inter font-bold">TIME</h1></div>
       }
       return (
         <FullScreenProvider>
